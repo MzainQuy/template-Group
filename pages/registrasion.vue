@@ -57,18 +57,21 @@
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style scoped>
 body {
+  margin-top: -10px;
+  width: 100%;
+  height: 1200px;
   background-color: #c8edff;
 }
 .container {
   padding: 16px;
 }
 .header-title {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #009ee2;
   font-size: 37px;
 }
@@ -97,8 +100,8 @@ form {
 label {
   margin: 12px 0;
 }
-input[type="text"],
-input[type="password"] {
+input[type='text'],
+input[type='password'] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
