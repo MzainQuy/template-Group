@@ -1,13 +1,13 @@
 <template>
-  <body>
+  <body class="min-vw-100 min-vh-100 p-1">
     <div class="wrapp">
-      <div class="container ml-5 mt-2">
-        <nuxt-link to="/landing-page">
+      <div class="container ml-5">
+        <nuxt-link to="/">
           <h1 class="header-title">Survey.In</h1>
         </nuxt-link>
       </div>
 
-      <div class="container login-form">
+      <div class="container login-form mt-3 mx-auto">
         <form method="post">
           <h2 class="header-login">Register</h2>
 
@@ -62,10 +62,9 @@ export default {}
 
 <style scoped>
 body {
-  margin-top: -10px;
-  width: 100%;
-  height: 1200px;
   background-color: #c8edff;
+  /* width: 100%; */
+  /* height: 100vh; */
 }
 .container {
   padding: 16px;

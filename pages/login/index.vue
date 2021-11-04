@@ -1,13 +1,13 @@
 <template>
   <html>
-    <body class="container-fluid">
+    <body class="min-vw-100 min-vh-100 p-1">
       <div class="container-fluid position-relative">
         <div class="ml-5 mt-2 header-title">
-          <nuxt-link to="/landing-page">
+          <nuxt-link to="/">
             <h1 class="header-title">Survey.In</h1>
           </nuxt-link>
         </div>
-        <div class="container login-form mt-5">
+        <div class="container login-form mt-5 mx-auto">
           <form method="post">
             <h2 class="header-login">Login</h2>
 
@@ -64,9 +64,6 @@ export default {}
 
 <style scoped>
 body {
-  margin-top: -10px;
-  width: 100%;
-  height: 1200px;
   background-color: #c8edff;
 }
 

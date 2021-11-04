@@ -1,5 +1,5 @@
 <template>
-  <body>
+  <body class="min-vw-100 min-vh-100 p-1">
     <div class="container-fluid">
       <div class="container ml-5 mt-2">
         <nuxt-link to="/landing-page">
@@ -7,7 +7,7 @@
         </nuxt-link>
       </div>
 
-      <div class="container login-form">
+      <div class="container login-form mx-auto">
         <form method="post">
           <h2 class="header-login">Forgot-Password</h2>
           <div class="container">
@@ -46,9 +46,6 @@ export default {}
 
 <style scoped>
 body {
-  margin-top: -10px;
-  width: 100%;
-  height: 1200px;
   background-color: #c8edff;
 }
 

@@ -6,78 +6,39 @@
           <h1 class="header-class">Survey Groups</h1>
         </div>
 
-        <div class="row my-3 px-5">
+        <div class="row my-3 px-5 card-wrapp">
           <div class="col-lg-3 col-md-6 mt-4 images-wrapper">
-            <img src="~/assets/icon/card-img1.jpg" alt="" class="img-fluid" />
-            <div class="text-paragraf">
-              <h3>Survey group 3</h3>
-              <p>Lorem ipsum dolor sit amet...</p>
-              <p>Owner</p>
-              <p>Amount</p>
-            </div>
+            <nuxt-link to="/user-survey-page">
+              <img src="~/assets/icon/card-img1.jpg" alt="" class="img-fluid" />
+              <div class="text-paragraf">
+                <h3>Survey group 3</h3>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Owner</p>
+                <p>Amount</p>
+              </div>
+            </nuxt-link>
           </div>
           <div class="col-lg-3 col-md-6 mt-4 images-wrapper">
-            <img src="~/assets/icon/card-img2.jpg" alt="" class="img-fluid" />
-            <div class="text-paragraf">
-              <h3>Survey group 3</h3>
-              <p>Lorem ipsum dolor sit amet...</p>
-              <p>Owner</p>
-              <p>Amount</p>
-            </div>
+            <nuxt-link to="/user-survey-page">
+              <img src="~/assets/icon/card-img1.jpg" alt="" class="img-fluid" />
+              <div class="text-paragraf">
+                <h3>Survey group 3</h3>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Owner</p>
+                <p>Amount</p>
+              </div>
+            </nuxt-link>
           </div>
           <div class="col-lg-3 col-md-6 mt-4 images-wrapper">
-            <img src="~/assets/icon/card-img1.jpg" alt="" class="img-fluid" />
-            <div class="text-paragraf">
-              <h3>Survey group 3</h3>
-              <p>Lorem ipsum dolor sit amet...</p>
-              <p>Owner</p>
-              <p>Amount</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mt-4 images-wrapper">
-            <img src="~/assets/icon/card-img2.jpg" alt="" class="img-fluid" />
-            <div class="text-paragraf">
-              <h3>Survey group 3</h3>
-              <p>Lorem ipsum dolor sit amet...</p>
-              <p>Owner</p>
-              <p>Amount</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mt-4 images-wrapper">
-            <img src="~/assets/icon/card-img2.jpg" alt="" class="img-fluid" />
-            <div class="text-paragraf">
-              <h3>Survey group 3</h3>
-              <p>Lorem ipsum dolor sit amet...</p>
-              <p>Owner</p>
-              <p>Amount</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mt-4 images-wrapper">
-            <img src="~/assets/icon/card-img2.jpg" alt="" class="img-fluid" />
-            <div class="text-paragraf">
-              <h3>Survey group 3</h3>
-              <p>Lorem ipsum dolor sit amet...</p>
-              <p>Owner</p>
-              <p>Amount</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mt-4 images-wrapper">
-            <img src="~/assets/icon/card-img2.jpg" alt="" class="img-fluid" />
-            <div class="text-paragraf">
-              <h3>Survey group 3</h3>
-              <p>Lorem ipsum dolor sit amet...</p>
-              <p>Owner</p>
-              <p>Amount</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mt-4 images-wrapper">
-            <img src="~/assets/icon/card-img2.jpg" alt="" class="img-fluid" />
-            <div class="text-paragraf">
-              <h3>Survey group 3</h3>
-              <p>Lorem ipsum dolor sit amet...</p>
-              <p>Owner</p>
-              <p>Amount</p>
-            </div>
+            <nuxt-link to="/user-survey-page">
+              <img src="~/assets/icon/card-img1.jpg" alt="" class="img-fluid" />
+              <div class="text-paragraf">
+                <h3>Survey group 3</h3>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Owner</p>
+                <p>Amount</p>
+              </div>
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -86,7 +47,7 @@
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style scoped>
@@ -94,6 +55,7 @@ export default {};
   position: relative;
   top: 20px;
 }
+
 .images-wrapper {
   position: relative;
 }

@@ -1,8 +1,8 @@
 <template>
-  <body>
+  <body class="min-vw-100 min-vh-100 p-1">
     <div class="wrapp">
       <div class="container ml-5 mt-2">
-        <nuxt-link to="/landing-page">
+        <nuxt-link to="login/forgot-password/reset-password">
           <h1 class="header-title">Survey.In</h1>
         </nuxt-link>
       </div>
@@ -54,9 +54,6 @@ export default {}
 
 <style scoped>
 body {
-  margin-top: -10px;
-  width: 100%;
-  height: 1200px;
   background-color: #c8edff;
 }
 
