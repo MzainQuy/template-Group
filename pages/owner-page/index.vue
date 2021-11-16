@@ -2,35 +2,40 @@
   <body class="min-vw-100 min-vh-100">
     <navbar-group />
     <div class="container-fluid">
-      <div class="container">
+      <div class="container-fluid">
         <div class="hero-image">
-          <div class="hero-text p-3 ml-4">
+          <div class="hero-text p-3 ml-3">
             <h2>Survey group 1</h2>
             <div>
               <span
                 >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </span>
             </div>
-            <div>
-              <span>Arnold Dixon - (Owner)</span>
+            <div class="d-flex">
+              <span class="mr-auto">Arnold Dixon - (Owner)</span>
             </div>
-            <div>
-              <span>10 members</span>
-            </div>
-            <div class="button-wrapp">
-              <button type="" class="button">
-                <img src="~assets/image/exitIcon.svg" alt="" /> Exit group
-              </button>
+            <div class="d-flex">
+              <span class="mr-auto">10 members</span>
+              <div class="">
+                <button type="" class="button d-block">
+                  <img src="~assets/image/mountain-icon.svg" alt="" /> Change
+                  image banner
+                </button>
+                <button type="" class="button d-block button-c">
+                  <img src="~assets/image/pencil.svg" alt="" /> Edit group
+                  information
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-2 text-center mt-2">
+          <div class="col-lg text-center mt-2">
             <div class="button-wrapp">
               <button
-                @click="component = 'amount-User'"
+                @click="component = 'amount-Owner'"
                 type=""
                 class="button-members"
               >
@@ -40,9 +45,9 @@
                 </div>
               </button>
               <button
-                @click="component = 'survey-User'"
                 type=""
                 class="button-survey"
+                @click="component = 'survey-Owner'"
               >
                 <div class="mr-2">
                   <img
@@ -62,17 +67,17 @@
 </template>
 
 <script>
-import amountUser from '~/components/amountUser.vue'
-import surveyUser from '~/components/surveyUser.vue'
+import userOwnerMount from '~/components/userOwnerMount.vue'
+import surveyOwner from '~/components/surveyOwner.vue'
 
 export default {
   components: {
-    'amount-User': amountUser,
-    'survey-User': surveyUser,
+    'amount-Owner': userOwnerMount,
+    'survey-Owner': surveyOwner,
   },
   data() {
     return {
-      component: 'amount-User',
+      component: 'amount-Owner',
     }
   },
 }
@@ -100,11 +105,18 @@ body {
   margin-top: 10px;
 }
 .button {
+  position: relative;
+  top: -25px;
   border: none;
-  width: 140px;
+  width: 220px;
+  padding: 4px;
   border-radius: 10px;
-  background-color: #f0500f;
+  background-color: #c4c4c4;
   color: azure;
+  margin-top: 10px;
+}
+.button.button-c {
+  background-color: #009ee2;
 }
 .button-survey {
   border: none;

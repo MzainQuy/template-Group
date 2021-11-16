@@ -1,59 +1,51 @@
 <template>
-  <body class="min-vw-100 min-vh-100 p-1">
-    <div class="wrapp">
-      <div class="container ml-5">
-        <nuxt-link to="/">
-          <h1 class="header-title">Survey.In</h1>
-        </nuxt-link>
-      </div>
+  <html>
+    <body class="min-vw-100 min-vh-100 p-1">
+      <div class="container-fluid position-relative">
+        <div class="ml-5 mt-2 header-title">
+          <nuxt-link to="/">
+            <h1 class="header-title">Survey.In</h1>
+          </nuxt-link>
+        </div>
+        <div class="container regist-form mt-5 mx-auto">
+          <form method="post">
+            <h2 class="header-regis">Register</h2>
 
-      <div class="container login-form mt-3 mx-auto">
-        <form method="post">
-          <h2 class="header-login">Register</h2>
-
-          <div class="container">
-            <div class="arrow-icon">
-              <nuxt-link to="/login">
-                <img
-                  src="~assets/icon/left-arrow.png"
-                  alt=""
-                  class="icon-arrow"
+            <div class="container">
+              <div class="wrapp-input">
+                <label for="uname"><b>Name</b></label>
+                <input
+                  type="text"
+                  placeholder="Enter Name"
+                  name="uname"
+                  required
                 />
-              </nuxt-link>
-            </div>
-            <div class="wrapp-input">
-              <label for="uname"><b>Nama</b></label>
-              <input
-                type="text"
-                placeholder="Enter UserName"
-                name="uname"
-                required
-              />
-              <label for="psw"><b>Email</b></label>
-              <input
-                type="password"
-                placeholder="Enter Email"
-                name="psw"
-                required
-              />
-              <label for="psw"><b>Password</b></label>
-              <input
-                type="password"
-                placeholder="Enter Password"
-                name="psw"
-                required
-              />
-              <div class="wrapp-button-login">
-                <nuxt-link to="/login">
-                  <button type="submit" class="button-login">Login</button>
-                </nuxt-link>
+                <label for="psw"><b>Email</b></label>
+                <input
+                  type="email"
+                  placeholder="Enter Email"
+                  name="eml"
+                  required
+                />
+                <label for="psw"><b>Password</b></label>
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  name="psw"
+                  required
+                />
+                <div class="wrapp-button-login">
+                  <nuxt-link to="/login">
+                    <button type="submit" class="button-login">Register</button>
+                  </nuxt-link>
+                </div>
               </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
-  </body>
+    </body>
+  </html>
 </template>
 
 <script>
@@ -63,22 +55,19 @@ export default {}
 <style scoped>
 body {
   background-color: #c8edff;
-  /* width: 100%; */
-  /* height: 100vh; */
 }
-.container {
-  padding: 16px;
-}
+
 .header-title {
   font-family: 'Roboto', sans-serif;
   color: #009ee2;
   font-size: 37px;
 }
-.login-form {
+.regist-form {
+  margin-top: 30px;
   max-width: 450px;
   max-height: 540px;
 }
-.header-login {
+.header-regis {
   position: relative;
   width: 0;
   left: 34%;
@@ -92,15 +81,13 @@ form {
 
 .wrapp-input {
   position: relative;
-  top: 0;
+  top: 8px;
   padding: 30px;
 }
 
-label {
-  margin: 12px 0;
-}
 input[type='text'],
-input[type='password'] {
+input[type='password'],
+input[type='email'] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -124,12 +111,5 @@ input[type='password'] {
   cursor: pointer;
   width: 50%;
   border-radius: 20px;
-}
-
-.icon-arrow {
-  width: 20px;
-  position: absolute;
-  top: 17.4%;
-  margin: 0 10px;
 }
 </style>

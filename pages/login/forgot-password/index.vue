@@ -2,7 +2,7 @@
   <body class="min-vw-100 min-vh-100 p-1">
     <div class="container-fluid">
       <div class="container ml-5 mt-2">
-        <nuxt-link to="/landing-page">
+        <nuxt-link to="/">
           <h1 class="header-title">Survey.In</h1>
         </nuxt-link>
       </div>
@@ -28,7 +28,7 @@
                 required
               />
               <div class="wrapp-button-login">
-                <nuxt-link to="forgot-password/reset-password">
+                <nuxt-link to="./resetPassword">
                   <button class="button-login">Request Password Reset</button>
                 </nuxt-link>
               </div>

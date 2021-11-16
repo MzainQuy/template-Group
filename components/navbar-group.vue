@@ -5,7 +5,7 @@
       style="background-color: #009ee2; border-radius: 0 0 40px 40px"
     >
       <b-navbar toggleable="lg" type="dark" variant="">
-        <b-navbar-brand href="#" class="header-title">Survey.In</b-navbar-brand>
+        <b-navbar-brand href="/" class="header-title">Survey.In</b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

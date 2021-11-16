@@ -96,7 +96,8 @@ form {
 }
 
 input[type='text'],
-input[type='password'] {
+input[type='password'],
+input[type='email'] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -147,17 +148,4 @@ input[type='password'] {
   left: 21.1%;
   top: 0;
 }
-/* 
-@media (max-width: 576px) {
-  .header-title {
-    margin-top: -0.5rem;
-    margin-left: -2rem;
-    font-size: 50px;
-  }
-  .login-form {
-    position: relative;
-    left: 23px;
-    margin-top: 29px;
-  }
-} */
 </style>

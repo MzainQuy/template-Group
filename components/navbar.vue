@@ -5,7 +5,7 @@
       style="background-color: #009ee2; border-radius: 0 0 40px 40px"
     >
       <b-navbar toggleable="lg" type="dark" variant="">
-        <b-navbar-brand href="#" class="header-title">Survey.In</b-navbar-brand>
+        <b-navbar-brand href="/" class="header-title">Survey.In</b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -14,14 +14,26 @@
           <b-navbar-nav class="ml-auto">
             <div class="button-wrap d-flex align-items-center">
               <b-button class="button" id="show-btn" @click="showModal"
-                >Join Survey Group</b-button
+                ><img
+                  src="~/assets/image/plusButtoon.svg"
+                  alt=""
+                  class="mr-1"
+                />
+                Join Survey Group</b-button
               >
               <b-modal
                 ref="my-modal"
                 hide-footer
-                title="Insert code here given by admin or survey creator to join a survey group"
-                class="text-insert-code"
+                hide-header
+                style="background-color: #009ee2; border-radius: 0 0 40px 40px"
               >
+                <h4
+                  class="text-center fw-normal"
+                  style="font-weight: 300; padding: 5px; margin-bottom: 15px"
+                >
+                  Insert code here given by admin or survey creator to join a
+                  survey group
+                </h4>
                 <input
                   type=""
                   name=""
@@ -37,7 +49,12 @@
               </b-modal>
               <div>
                 <b-button v-b-modal.modal-1 class="button"
-                  >Create Group</b-button
+                  ><img
+                    src="~/assets/image/twoPersonIcon.svg"
+                    alt=""
+                    class="mr-2"
+                  />
+                  Create Group</b-button
                 >
 
                 <b-modal hide-footer hide-header id="modal-1">
@@ -52,12 +69,14 @@
                     />
 
                     <label for="lname">Group description</label>
-                    <input
-                      type="text"
-                      id="lname"
-                      name="lastname"
-                      placeholder="Your last name.."
-                    />
+                    <textarea
+                      id="w3review"
+                      name="w3review"
+                      cols="57"
+                      style="border-radius: 20px"
+                      placeholder="Group Description"
+                    >
+                    </textarea>
                     <label for="lname">Group Token</label>
                     <input
                       type="text"
@@ -65,15 +84,16 @@
                       name="lastname"
                       placeholder="Your last name.."
                     />
-                    <label for="lname">Group Image</label>
-                    <input
-                      type="file"
-                      id="lname"
-                      name="lastname"
-                      placeholder="Your last name.."
-                    />
+                    <label id="file" for="file">Group Image</label>
+                    <input type="file" id="lname" class="" accept="image/*" />
                     <br /><br />
-                    <input type="submit" value="Submit" />
+                    <div class="container-fluid d-flex justify-content-center">
+                      <div class="col-12">
+                        <button class="button-create center" type="submit">
+                          Create
+                        </button>
+                      </div>
+                    </div>
                   </form>
                 </b-modal>
               </div>
@@ -93,16 +113,12 @@
                   <img src="~assets/icon/card-img4.jpg" />
                 </div>
               </div>
-              <span class="text-account">
-                <b-dropdown-item href="#" class="text-center mt-3"
-                  >My Account</b-dropdown-item
-                >
-              </span>
-              <span class="text-account">
-                <b-dropdown-item href="#" class="text-center"
-                  >Sign Out</b-dropdown-item
-                >
-              </span>
+              <b-dropdown-item href="#" class="text-center mt-3"
+                >My Account</b-dropdown-item
+              >
+              <b-dropdown-item href="#" class="text-center text-item"
+                >Sign Out</b-dropdown-item
+              >
             </b-nav-item-dropdown>
           </b-navbar-nav>
         </b-collapse>
@@ -132,6 +148,11 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,900;1,300;1,500&display=swap');
 
+b-modal {
+  -webkit-border-radius: 40px !important;
+  -moz-border-radius: 40px !important;
+  border-radius: 40px !important;
+}
 .header-title {
   font-family: 'Roboto', sans-serif;
   color: #fff;
@@ -147,7 +168,11 @@ export default {
   border-radius: 10px;
   border: 0 solid;
 }
-
+textarea {
+  border: 1px solid rgb(168, 60, 60);
+  box-shadow: 2px 2px 3px rgb(61, 58, 58);
+  border-radius: 10px;
+}
 .dropdown img {
   border-radius: 50%;
   background-position: center;
@@ -158,9 +183,9 @@ b-modal {
   text-align: center;
 }
 input {
-  text-align: center;
   width: 100%;
-  border: 3px solid #364e24;
+  border: 1px solid rgb(199, 192, 192);
+  box-shadow: 2px 2px 3px rgb(61, 58, 58);
   border-radius: 10px;
 }
 
@@ -176,6 +201,30 @@ input[type='password'] {
   border: 1px solid rgb(139, 33, 33);
   box-sizing: border-box;
   border-radius: 18px;
+}
+input[type='file'] {
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  margin: 4px 0;
+  color: #f3f3f3;
+  background: url('assets/icon/left-arrow.png');
+  background: #75b54a;
+}
+::-webkit-file-upload-button {
+  width: 37.5%;
+  visibility: hidden;
+}
+
+.button-create {
+  width: 170px;
+  height: 40px;
+  background-color: #009ee2;
+  color: aliceblue;
+  border-radius: 10px;
+  border: 1px solid;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 998px) {

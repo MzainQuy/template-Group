@@ -2,7 +2,7 @@
   <body class="min-vw-100 min-vh-100 p-1">
     <div class="wrapp">
       <div class="container ml-5 mt-2">
-        <nuxt-link to="/landing-page">
+        <nuxt-link to="/">
           <h1 class="header-title">Survey.In</h1>
         </nuxt-link>
       </div>
@@ -12,7 +12,7 @@
           <h2 class="header-login">Password Reset</h2>
           <div class="container">
             <div class="arrow-icon">
-              <nuxt-link to="/login">
+              <nuxt-link to="./forgot-password">
                 <img
                   src="~assets/icon/left-arrow.png"
                   alt=""
@@ -31,7 +31,7 @@
                 required
               />
               <div class="wrapp-button-login">
-                <nuxt-link to="/new-password">
+                <nuxt-link to="./newPassword">
                   <button type="submit" class="button-login">
                     Request Password Reset
                   </button>
