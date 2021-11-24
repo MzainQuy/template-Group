@@ -170,10 +170,6 @@ export default {
       // this.group_pict = ''
     },
 
-    // onFileChange(event) {
-    //   this.group_pict = event.target.files[0].name
-    //   console.log(this.group_pict)
-    // },
     showModal() {
       this.$refs['my-modal'].show()
     },
