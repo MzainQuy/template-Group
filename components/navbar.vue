@@ -59,13 +59,14 @@
 
                 <b-modal hide-footer hide-header id="modal-1">
                   <h2 class="text-center mb-3">Create new survey group</h2>
-                  <form action="" hide-footer>
+                  <form @submit="onSubmit" action="" hide-footer>
                     <label for="fname">Group name</label>
                     <input
                       type="text"
                       id="fname"
                       name="firstname"
                       placeholder="Your name.."
+                      v-model="group_name"
                     />
 
                     <label for="lname">Group description</label>
@@ -75,6 +76,7 @@
                       cols="57"
                       style="border-radius: 20px"
                       placeholder="Group Description"
+                      v-model="group_desc"
                     >
                     </textarea>
                     <label for="lname">Group Token</label>
@@ -83,9 +85,16 @@
                       id="lname"
                       name="lastname"
                       placeholder="Your last name.."
+                      v-model="token"
                     />
-                    <label id="file" for="file">Group Image</label>
-                    <input type="file" id="lname" class="" accept="image/*" />
+                    <!-- <label id="file" for="file">Group Image</label>
+                    <input
+                      type="file"
+                      id="lname"
+                      class=""
+                      accept="image/*"
+                      @change="onFileChange"
+                    /> -->
                     <br /><br />
                     <div class="container-fluid d-flex justify-content-center">
                       <div class="col-12">
@@ -129,7 +138,42 @@
 
 <script>
 export default {
+  data() {
+    return {
+      group: [],
+
+      group_name: '',
+      group_desc: '',
+      group_pict: '',
+      token: '',
+      created_at: '',
+      updated_at: '',
+    }
+  },
+
   methods: {
+    onSubmit(e) {
+      e.preventDefault()
+      console.log(this.onFileChange())
+      const newGroup = {
+        group_name: this.group_name,
+        group_desc: this.group_desc,
+        token: this.token,
+        // group_pict: this.onFileChange(),
+      }
+
+      this.$emit('add-group', newGroup)
+
+      this.group_name = ''
+      this.group_desc = ''
+      this.token = ''
+      // this.group_pict = ''
+    },
+
+    // onFileChange(event) {
+    //   this.group_pict = event.target.files[0].name
+    //   console.log(this.group_pict)
+    // },
     showModal() {
       this.$refs['my-modal'].show()
     },

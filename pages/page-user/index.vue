@@ -1,18 +1,50 @@
 <template>
   <body class="min-vw-100 min-vh-100 position-relative">
     <div class="container-fluid content">
-      <navbar />
-      <firstLoginImg />
+      <navbar @add-group="addGroup" />
+      <!-- <firstLoginImg /> -->
+      <CardUserGroup :group="Group" />
     </div>
   </body>
 </template>
 
 <script>
+import CardUserGroup from '~/components/cardUserGroup.vue'
+
 export default {
+  name: 'pageUser',
+  components: { CardUserGroup },
   data() {
     return {
       show: false,
+      Group: [],
     }
+  },
+  methods: {
+    async showGroup() {
+      const res = await fetch('http://localhost:8000/api/group')
+      const data = await res.json()
+      return data
+    },
+
+    async addGroup(task) {
+      const res = await fetch('http://localhost:8000/api/group/create', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify(task),
+      })
+
+      const data = await res.json()
+
+      this.Group = data
+      console.log(task)
+    },
+  },
+
+  async created() {
+    this.Group = await this.showGroup()
   },
 }
 </script>

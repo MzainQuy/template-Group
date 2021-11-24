@@ -8,14 +8,14 @@
           </nuxt-link>
         </div>
         <div class="container login-form mt-5 mx-auto">
-          <form method="post">
+          <form type="post">
             <h2 class="header-login">Login</h2>
 
             <div class="container">
               <div class="wrapp-input">
                 <label for="uname"><b>Email</b></label>
                 <input
-                  type="text"
+                  type="email"
                   placeholder="Enter Email"
                   name="uname"
                   required

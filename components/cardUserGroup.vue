@@ -5,41 +5,12 @@
         <div class="col-12 position-relative text-center">
           <h1 class="header-class">Survey Groups</h1>
         </div>
-
-        <div class="row my-3 px-5 card-wrapp">
-          <div class="col-lg-3 col-md-6 mt-4 images-wrapper">
-            <nuxt-link to="/user-survey-page">
-              <img src="~/assets/icon/card-img1.jpg" alt="" class="img-fluid" />
-              <div class="text-paragraf">
-                <h3>Survey group 3</h3>
-                <p>Lorem ipsum dolor sit amet...</p>
-                <p>Owner</p>
-                <p>Amount</p>
-              </div>
-            </nuxt-link>
-          </div>
-          <div class="col-lg-3 col-md-6 mt-4 images-wrapper">
-            <nuxt-link to="/user-survey-page">
-              <img src="~/assets/icon/card-img1.jpg" alt="" class="img-fluid" />
-              <div class="text-paragraf">
-                <h3>Survey group 3</h3>
-                <p>Lorem ipsum dolor sit amet...</p>
-                <p>Owner</p>
-                <p>Amount</p>
-              </div>
-            </nuxt-link>
-          </div>
-          <div class="col-lg-3 col-md-6 mt-4 images-wrapper">
-            <nuxt-link to="/user-survey-page">
-              <img src="~/assets/icon/card-img1.jpg" alt="" class="img-fluid" />
-              <div class="text-paragraf">
-                <h3>Survey group 3</h3>
-                <p>Lorem ipsum dolor sit amet...</p>
-                <p>Owner</p>
-                <p>Amount</p>
-              </div>
-            </nuxt-link>
-          </div>
+        <div
+          v-for="groupLop in group.Group"
+          :key="groupLop.id"
+          class="col-lg-3 col-md-6 mt-4"
+        >
+          <CardChild :groupChild="groupLop" />
         </div>
       </div>
     </div>
@@ -47,34 +18,19 @@
 </template>
 
 <script>
-export default {}
+import CardChild from '~/components/cardchild.vue'
+export default {
+  name: 'groupWrapper',
+  components: { CardChild },
+  props: {
+    group: Array,
+  },
+}
 </script>
 
 <style scoped>
 .header-class {
   position: relative;
   top: 20px;
-}
-
-.images-wrapper {
-  position: relative;
-}
-.images-wrapper img {
-  border-radius: 20px;
-  transition: 5s;
-}
-.images-wrapper img:hover,
-.text-paragraf:hover {
-  cursor: pointer;
-  width: 95%;
-  height: 95%;
-}
-.text-paragraf {
-  line-height: 1;
-  padding: 13px;
-  margin-left: 5px;
-  color: azure;
-  position: absolute;
-  top: 0;
 }
 </style>
